@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ШИПШИНА_TWIST</title>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400">
+  <link rel="stylesheet" href="css/style.css">  
+  <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $('a[href^="#"]').click(function () {
+            elementClick = $(this).attr("href");
+            destination = $(elementClick).offset().top;
+            if($.browser.safari){
+                $('body').animate( { scrollTop: destination }, 1000);
+            } 
+            if($.browser.chrome){
+                $('body').animate( { scrollTop: destination }, 1000);
+            } 
+            else {
+                $('html').animate( { scrollTop: destination }, 1000 );
+            }
+            return false;
+        });
+    });
+  </script>
+</head>
+    <body>   
+        <header>
+            <a id="partners"></a>
+            <div class="grid-header">
+                <div id="slider" >
+                    <figure>
+                        <img src="img/1partner.png" alt="Партнер">
+                        <img src="img/2partner.png" alt="Партнер">
+                        <img src="img/3partner.png" alt="Партнер">
+                    </figure>
+                </div>    
+                <div class="header-text">
+                    <div class="bla">
+                        <div class="logo">   
+                            <div class="lg1">
+                                <img src="img/logogeeee1.png" alt="shyp-shyna">
+                            </div>
+                            <h1>
+                                Програма лояльності!
+                            </h1>
+                        </div>
+                        <div class="top-bar">
+                            <nav class="main-nav">
+                                <ul>
+                                    <li class="nav-item"><a href="#partners" class="nav-item-link">ПАРТНЕРИ</a></li>
+                                    <li class="nav-item"><a href="#network" class="nav-item-link">МЕРЕЖА</a></li>
+                                    <li class="nav-item"><a href="#news" class="nav-item-link">НОВИНИ</a></li>
+                                    <li class="nav-item"><a href="#about_us" class="nav-item-link">ПРО НАС</a></li>
+                                    <li class="nav-item"><a href="#hot_line" class="nav-item-link">ГАРЯЧА ЛІНІЯ</a></li>
+                                    <li class="nav-item"><a href="#sign_in" class="nav-item-link">УВІЙТИ</a></li>
+                                    <img src="img/door.png" alt="shyp-shyna">
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="signUp">
+                        <div class="bt">
+                            <button class="button">ЗАРЕЄСТРУВАТИСЬ</button>
+                        </div>
+                        <div class="newsCall">
+                            <div class="call">
+                                <img src="img/callback.png" alt="shyp-shyna">
+                            </div>
+                            <div class="newsC">
+                                <img src="img/fbPost.png" alt="shyp-shyna">
+                            </div>
+                            <div class="newsC">
+                                <img src="img/fbPost.png" alt="shyp-shyna">
+                            </div>
+                            <div class="newsC">
+                                <img src="img/fbPost.png" alt="shyp-shyna">
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </header>
+        <a id="network"></a>
+        <div class="container1">
+            <h1>
+                Мережа програми лояльності TWIST
+            </h1>
+            <style>
+                 #map{
+                     width: 100%;
+                     height: 500px;
+                 }
+            </style>
+            <div id="map"></div>
+            <script>
+            function initMap() {
+                var element = document.getElementById('map');
+                var options = {
+                    zoom: 6,
+                    center: {lat: 50.450100, lng: 30.523400}
+                };
+                var myMap = new google.maps.Map(element, options);
+                    addMarker({
+                    coordinates: ({lat: 50.450100, lng: 30.523400}),
+                    info: '<h2>вул. Хрещатик</h2>'
+                    });
+                    addMarker({
+                        coordinates: ({lat: 49.839683, lng: 24.029717}),
+                        info: '<h2>вул. Городоцька, 357</h2>'
+                    });
+                    addMarker({
+                        coordinates: ({lat: 50.619900, lng: 26.251617}),
+                        info: '<h2>вул. Петлюри</h2>'
+                    });
+                    addMarker({
+                        coordinates: ({lat: 49.553517, lng: 25.594767}),
+                        info: '<h2>вул. Чорновола</h2>'
+                    });
+                function addMarker(properties) {
+                    var marker = new google.maps.Marker({
+                        position: properties.coordinates,
+                        map: myMap,
+                    });
+                    if(properties.image)
+                    {
+                        marker.setIcon(properties.image, [7,7]);
+                    }
+                    if(properties.info)
+                    {
+                        var InfoWindow = new google.maps.InfoWindow({
+                            content: properties.info
+                        });
+                        marker.addListener('click', function(){
+                        InfoWindow.open(myMap, marker);
+                        })
+                    }
+                }
+            }
+            </script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlG3XYlsp3t_NyhcJeum8Bh2prmiF32y4&callback=initMap"async defer></script>
+        </div>
+        <a id="news"></a>
+        <div class="container2">
+                <h1>
+                    НОВИНИ
+                </h1>
+            <div class="slider2">
+                <img src="img/1news.png" alt width="250" height="250">
+                <img src="img/2news.png" alt width="250" height="250">
+                <img src="img/3news.png" alt width="250" height="250">
+                <img src="img/1news.png" alt width="250" height="250">
+            </div>    
+        </div>
+        <a id="hot_line"></a>
+        <a id="about_us"></a>
+        <div class="container3">
+            <h1><strong>КОНТАКТИ</strong></h1>  
+            <div class="contacts">
+                <div class="cont1">
+                    <div class="contA">
+                        <h2>
+                            ГАРЯЧА ЛІНІЯ
+                        </h2>
+                        <div class="btHl">
+                            <button class="buttonHl">0 800 300 321</button>
+                        </div>
+                    </div> 
+                    <div class="contB">
+                        <div class="adr"> 
+                            <p>
+                                Адреса:<br>
+                                місто: Львів<br> 
+                                вулиця: Городоцька, 357<br> 
+                                індекс: 79000<br>
+                                Тел: 044 392 07 02;<br> 
+                                +38 (032) 290 70 02<br>
+                            </p>
+                        </div>
+                        <div class="adrM">
+                            <img src="img/shypL.jpeg" alt width="320" height="290" >
+                        </div>
+                    </div>
+                </div> 
+                <div class="cont2">
+                    <p>Маєте <strong>запитання</strong></p>
+                    <div class="sarea">
+                        <div class="sto">
+                            <input class="your_name" name="name" id="name" type="name" placeholder="Введіть ваше ім'я" required>
+                            <input class="your_number" name="number" id="number" type="number" placeholder="Введіть ваш номер телефону" required>
+                        </div>
+                        <div class="std">
+                            <input class="your_question" name="question" id="question" type="question" placeholder="Залишити запитання" required>
+                            <button class="send_btn" type="send">Надіслати</button>
+                        </div>
+                    </div>
+                </div> 
+            </div>   
+        </div>
+        <footer>
+            <div class="grid">
+                <div class="grid-footer">
+                    <div class="social">
+                        <p class="social">Ми в соціальних мережах</p>
+                        <a href="https://www.facebook.com/LoyaltyProgramTwist/">
+                        <img src="img/socLog.png" alt width="70" height="30" >
+                        </a>
+                    </div>
+                    <div class="hl">
+                        <p class="hl">Гаряча лінія</p>
+                        <p class="hl">0 800 300 321</p>
+                        <p class="copyright">&copy; Copyright 2018 - All rights reserved. </p>
+                    </div>
+                    <div class="ofSite">
+                        <p class="ofSite">Офіційний сайт "Шипшина"</p>
+                        <a href="https://shyp-shyna.com.ua">www.shyp-shyna.com.ua</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

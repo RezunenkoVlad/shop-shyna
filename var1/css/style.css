@@ -1,0 +1,462 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+@media only screen and (min-width: 900px) and (max-width: 1400px) {  
+
+    .grid-header {
+        display: grid;
+        width: 100%;
+        height: auto;
+    }
+    *{
+        margin: 0;
+      }
+      @keyframes slider {
+        0%{
+          left: 0;
+        }
+        20%{
+          left: 0;
+        }
+        25%{
+          left: -100%;
+        }
+        45%{
+          left: -100%;
+        }
+        50%{
+          left: -200%;
+        }
+        70%{
+          left: -200%;
+        }
+        75%{
+          left: -300%;
+        }
+        95%{
+          left: -300%;
+        }
+        100%{
+          left: -400%;
+        }
+      }
+      #slider{
+        width: 100%;
+        position: absolute;
+        overflow: hidden;
+      }
+      #slider figure img{
+        z-index: 4;
+        width: 20%;
+        float: left;
+        display: block;
+      }
+      #slider figure{
+        position: relative;
+        width: 500%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 10vh;
+        margin-bottom: 0;
+        animation: 20s slider infinite;
+      }
+    .header-text {
+        grid-area: 1/1;
+        display: grid; 
+        font-family: open sans;
+        font-weight: 200;
+        font-size: 12px;
+    }
+    .bla {
+        width: 100%;
+        height: 9vh;
+        position: fixed;
+        background-color: rgb(190, 0, 14);
+        display: grid;
+        margin-right: 5%;
+        margin-top: 4px;
+        z-index: 11;
+        grid-template-columns: 3fr 4fr;
+    }
+    .logo {
+        padding-left: 5%;
+        height: 56px;
+        display: grid;
+        grid-template-columns: 2fr 3fr;   
+    }
+    .lg1 img {
+        position: absolute;
+        margin-left: 0;
+        height: 53px;
+        float: left;
+    }
+    .logo h1 {
+        margin-top: 10px;
+        color: rgb(253, 255, 131);
+        font-family: Brush Script MT;
+        text-shadow:  0 0 4px black;
+        text-align: right;
+        font-size: 2.7vw;
+        transform: rotate(-5deg);
+    }
+    .top-bar {
+        margin-right: 4%;
+        float: right;
+        z-index: 11;
+    }
+    .top-bar img {
+        padding: 1px;
+        height: 37px;
+        float: right;
+    }
+    .top-bar img:hover {
+        transition-duration: 0.2s;
+        cursor: pointer;
+        border-radius: 2px;
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+    .top-bar ul {
+        margin-top: 10px;
+        list-style-type: none;
+        padding: 0;
+        right: 0;
+        width: 620px;
+        float: right;
+        z-index: 11;
+        vertical-align: center;
+    }
+    .top-bar li a {
+        font-size: 1.3em;
+        color: white;
+        text-decoration: none; 
+        margin-left: 20px;   
+        text-shadow:  0 0 4px black;
+        font-weight: 400;
+    }
+    .top-bar li a:hover {
+        color: white;
+        font-weight: 400;
+        border-bottom: 2px solid white;
+    }
+    .top-bar li a:active {
+        color: yellow;
+        font-weight: 400;
+        border-bottom: 2px solid yellow;
+    }
+    .main-nav li {
+        margin-top: 10px;
+        position: relative;
+        display: inline;
+        color: white;
+        float: left;
+    }
+    .signUp {
+        overflow: hidden;
+        width: 100%;
+        height: 17vw;
+        display: grid;
+        grid-template-rows: 35% 65%;
+        margin-top: 35vw;
+    }
+    .newsCall {
+        display: grid;
+        grid-template-columns: 1fr 3fr 3fr 3fr;
+    }
+    .newsC {
+        padding-left: 1em;
+        padding-right: 1em;
+        float: right;
+    }
+    .newsC img {
+        width: 100%;
+        height: auto;
+    }
+    .newsC img:hover {
+        border-radius: 7px;
+        background-color: rgba(190, 0, 14, 0.1);
+    }
+    .call {
+        padding-top: 1.5vw;
+        width: 7%;
+        float: left;
+        margin-left: 2.5vw;
+    }
+    .call img {
+        width: 90px;
+    }
+    .call img:hover {
+        border-radius: 50%; 
+        transition-duration: 0.2s;
+        cursor: pointer;
+        width: 110px;
+        transform: rotate(-15deg);
+    }
+    .bt { 
+        padding-top: 15px;
+        text-align: center;
+    }
+    .button {
+        box-shadow:  0 4px 4px 0 rgba(20, 20, 20, 0.5);
+        text-align: center;
+        border-radius: 25px;
+        width: 150px;
+        height: 30px;
+        color: white;
+        border: none;
+        background-color: red;
+    }
+    .button:hover{
+        background-color: rgb(45, 158, 23);
+        color: white;
+    }
+    .call {
+        float: right;
+    }
+    .container1 {
+        background-color: rgb(235, 235, 235);
+        margin-top: 5%;
+        text-align: center;
+        display: grid;
+        grid-template-rows: 50% 50%;
+        width: 100%;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    }
+    .container1 h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        color: red;
+        padding: 10px;
+        font-size: 1.5em;
+    }
+    .container1 img {
+        width: 100%;
+        height: 600px;
+    }
+    .container1 h2 {
+        color: red;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .element.style {
+        border-radius: 10px;
+    }
+    .container2 {
+        text-align: center;
+        width: 100%;
+        height: 600px;
+        margin-top: 5%;
+    }
+    .container2 h1 {
+        background-color: rgb(235, 235, 235);
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        padding: 10px;
+        font-size: 1.5em;
+    }
+    .container2 img {
+       margin-top: 3%;
+       margin-left: 2%;
+       margin-right: 2%;
+       text-align: center;
+       border-radius: 20px; 
+       box-shadow: 0 4px 4px rgba(0, 0, 0, 0.575)
+    }
+    .container2 img:hover {
+        transition-duration: 0.2s;
+        cursor: pointer;
+        border-radius: 20px;
+        box-shadow: 0 7px 7px rgba(0, 0, 0, 0.575)
+    }
+    .buttonHl {
+        text-shadow:  0 0 4px black;
+        font-size: 1em;
+        text-align: center;
+        border-radius: 10px;
+        width: 200px;
+        height: 40px;
+        color: white;
+        border: none;
+        background-color: red;
+        box-shadow:  0 4px 4px 0 rgba(20, 20, 20, 0.5);
+    }
+    .buttonHl:hover{
+        background-color: rgb(45, 158, 23);
+        color: white;
+    }
+    .container3 {
+        margin-top: 5%; 
+        text-align: center;
+        position: relative;
+        width: 100%;
+        height: 600px;
+    }
+    .container3 h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 10px;
+        font-size: 1.5em;
+        color: rgb(190, 0, 14);
+    } 
+    .contacts {
+        background-color: rgb(245, 245, 245);
+        grid-template-rows: 1fr 1fr;
+        display: grid;
+        width: 100%;
+        height: 550px;
+    }
+    .cont1 {
+        background-color: rgb(247, 247, 247);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .contA {
+        align-self: center;
+    }
+    .contA h2 {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 10px;
+        font-size: 1.5em;
+        color: rgb(190, 0, 14);
+    }
+    .contB {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    .adr p {
+        padding-top: 90px;
+        text-align: right;
+        color: black;
+    }
+    .cont2 {
+        background-color: rgb(255, 255, 255);
+    }
+    .cont2 p {
+        font-family: Arial, Helvetica, sans-serif;
+        padding-top: 25px;
+        font-size: 1.5em;
+        color: rgb(190, 0, 14);
+    }
+    .sarea {
+        grid-template-rows: 1fr 1fr;
+        width: 80%;
+        height: 7em;
+        display: grid;
+        margin-top: 3%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .sto {
+        align-self: center;
+        font-size: 16px;
+        text-align: center;
+        font-family: open sans;
+        font-weight: 300;
+    }
+    .your_name {
+        box-shadow:  0 4px 4px 0 rgba(20, 20, 20, 0.5);
+        padding-left: 3%;
+        background-color: rgba(243, 4, 104, 0.3);
+        border-radius: 10px;
+        border: 0; 
+        margin-right: 2%;
+        width: 400px;
+        height: 40px;
+    }
+    .your_number {
+        box-shadow:  0 4px 4px 0 rgba(20, 20, 20, 0.5);
+        padding-left: 3%;
+        background-color: rgba(243, 4, 104, 0.3);
+        border-radius: 10px;
+        border: 0; 
+        margin-left: 2%;
+        width: 40%;
+        height: 40px;
+    }
+    .your_question {
+        box-shadow:  0 4px 4px 0 rgba(20, 20, 20, 0.5);
+        padding-left: 3%;
+        background-color: rgba(243, 4, 104, 0.3);
+        margin-right: 2%;
+        border-radius: 10px;
+        border: 0; 
+        width: 62%;
+        height: 40px;
+    }
+    .std {
+        align-self: center;
+    }
+    .send_btn {
+        box-shadow:  0 4px 4px 0 rgba(20, 20, 20, 0.5);
+        margin-left: 2%;
+        border-radius: 10px;
+        border: 0; 
+        width: 20%;
+        height: 40px;
+        background-color: red;
+        color: white;
+        font-family: open sans;
+        font-weight: 200;
+    }
+    .send_btn:hover {
+        background-color: rgb(45, 158, 23)
+    }
+    .grid {
+        text-align: center;
+        display: grid;
+        width: 100%;
+        height: 100px;
+        background-color: rgb(190, 0, 14);
+    }
+    .grid-footer {
+        justify-self: center;
+        margin-top: 15px;
+        display: grid;
+        width: 80%;
+        grid-template-columns: auto auto auto;
+    }
+    .social {
+        text-align: center; 
+        padding-top: 5px;
+        color: white;
+        font-size: 1.1em;
+        font-weight: 400;
+        font-family: Arial, Helvetica, sans-serif;
+        text-shadow:  0 4px 4px rgba(20, 20, 20, 0.5);
+    }
+    .hl {
+        text-align: center; 
+        color: white;
+        font-size: 1em;
+        margin-bottom: 10px;
+        font-weight: 400;
+        font-family: Arial, Helvetica, sans-serif;
+        text-shadow:  0 4px 4px rgba(20, 20, 20, 0.5);
+    }
+    .copyright {
+        color: white;
+        font-size: 0.7em;
+        padding-bottom: 15px;
+    }
+    .ofSite {
+        text-shadow:  0 4px 4px rgba(20, 20, 20, 0.5);
+        padding-top: 5px;
+        text-align: center; 
+        color: white;
+        font-size: 1em;
+        font-weight: 400;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .ofSite a {
+        text-decoration: none;
+        color: white;
+        text-shadow: 0 4px 4px rgba(0, 0, 0, 0.575)
+    }
+    h5 {
+        font-family: open sans;
+        font-weight: 1000;
+        font-size: 14px;
+    }  
+}
+
+
+    
+    
+
+    
+    
